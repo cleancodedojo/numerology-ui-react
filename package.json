@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
-  "version": "5.0.0",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "numerology-ui-react",
+  "version": "0.0.0",
+  "description": "numerology app ui react",
   "engines": {
     "npm": ">=3"
   },
@@ -27,7 +27,7 @@
     "open:cover": "npm run test:cover && open coverage/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
+  "author": "Ray Joseph de Castro",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "3.3.7",
@@ -113,6 +113,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
+    "url": "https://github.com/cleancodedojo/numerology-ui-react.git"
   }
 }
