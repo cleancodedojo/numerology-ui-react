@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/numerology.css';
 import CalculationsPage from './CalculationsPage';
-import Numerology from '../core/numerology';
+import Numerology from 'numerology-core';
 
 class NumerologyPage extends Component {
   constructor(props) {
     super(props);
+
+    this.numerology = new Numerology();
 
     this.state = {
       firstName: '',
@@ -33,8 +35,7 @@ class NumerologyPage extends Component {
   }
 
   getDestinyNumber() {
-    let n = new Numerology();
-    return n.getDestinyNumber(this.getName());
+    return this.numerology.getDestinyNumber(this.getName());
   }
 
   handleFirstNameChange(event) {
