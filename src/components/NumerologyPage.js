@@ -56,6 +56,10 @@ class NumerologyPage extends Component {
     return this.numerology.getPersonalityNumber(this.getName());
   }
 
+  getRealityNumber() {
+    return this.numerology.getRealityNumber(this.getName(), this.getDateOfBirth());
+  }
+
   handleFirstNameChange(event) {
     this.setState({ firstName: event.target.value });
   }
@@ -106,7 +110,8 @@ class NumerologyPage extends Component {
           destinyNumber={this.getDestinyNumber()}
           birthForceNumber={this.getBirthForceNumber()} 
           heartsDesireNumber={this.getHeartsDesireNumber()}
-          personalityNumber={this.getPersonalityNumber()} />
+          personalityNumber={this.getPersonalityNumber()}
+          realityNumber={this.getRealityNumber()} />
       </div>
     );
   }

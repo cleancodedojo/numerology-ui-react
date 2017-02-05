@@ -34,6 +34,10 @@ class CalculationsPage extends Component {
                 <span className="badge">{this.props.personalityNumber}</span>
                 Personality Number
               </li>
+              <li className="list-group-item">
+                <span className="badge">{this.props.realityNumber}</span>
+                Reality Number
+              </li>
             </ul>
           </div>
         </div>
@@ -50,7 +54,8 @@ CalculationsPage.propTypes = {
   destinyNumber: React.PropTypes.number,
   birthForceNumber: React.PropTypes.number,
   heartsDesireNumber: React.PropTypes.number,
-  personalityNumber: React.PropTypes.number
+  personalityNumber: React.PropTypes.number,
+  realityNumber: React.PropTypes.number
 };
 
 export default CalculationsPage;
