@@ -1,6 +1,7 @@
 # numerology-ui-react
 * numerology mobile web application prototype 
 * user interface specific code using react framework
+* [https://numerology-app.herokuapp.com]
 
 ## developer machine setup
 ### mac operating system
@@ -44,7 +45,7 @@ npm start
 MIT
 
 ## team
-* [Ray Joseph de Castro]. Software Architect.
+* [ray joseph de castro]. software architect.
 
 ## references
 * jordan, juno. numerology. the romance in your name.
@@ -53,4 +54,5 @@ MIT
 [node]: https://nodejs.org/
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/
-[Ray Joseph de Castro]: https://github.com/raydecastro/
+[ray joseph de castro]: https://github.com/raydecastro
+[https://numerology-app.herokuapp.com]: https://numerology-app.herokuapp.com
