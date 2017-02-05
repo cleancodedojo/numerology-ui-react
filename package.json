@@ -11,7 +11,7 @@
     "remove-demo": "babel-node tools/removeDemo.js",
     "start-message": "babel-node tools/startMessage.js",
     "prestart-dev": "npm-run-all --parallel start-message",
-    "start-dev": "npm-run-all --parallel test:watch open:src lint:watch",
+    "start-dev": "npm run prestart-dev && npm-run-all --parallel test:watch open:src lint:watch",
     "open:src": "babel-node tools/srcServer.js",
     "open:dist": "babel-node tools/distServer.js",
     "lint": "esw webpack.config.* src tools --color",
