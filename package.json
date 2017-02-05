@@ -1,6 +1,6 @@
 {
   "name": "numerology-ui-react",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "numerology app ui react",
   "engines": {
     "npm": ">=3"
