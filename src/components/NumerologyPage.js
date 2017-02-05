@@ -13,12 +13,14 @@ class NumerologyPage extends Component {
     this.state = {
       firstName: '',
       lastName: '',
+      dateOfBirth: '',
       isVisible: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
+    this.handleDateOfBirthChange = this.handleDateOfBirthChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -30,6 +32,10 @@ class NumerologyPage extends Component {
     return this.state.firstName + ' ' + this.state.lastName;
   }
 
+  getDateOfBirth() {
+    return this.state.dateOfBirth;
+  }
+
   getIsVisible() {
     return this.state.isVisible;
   }
@@ -38,12 +44,28 @@ class NumerologyPage extends Component {
     return this.numerology.getDestinyNumber(this.getName());
   }
 
+  getBirthForceNumber() {
+    return this.numerology.getBirthForceNumber(this.getDateOfBirth());
+  }
+
+  getHeartsDesireNumber() {
+    return this.numerology.getHeartsDesireNumber(this.getName());
+  }
+
+  getPersonalityNumber() {
+    return this.numerology.getPersonalityNumber(this.getName());
+  }
+
   handleFirstNameChange(event) {
     this.setState({ firstName: event.target.value });
   }
 
   handleLastNameChange(event) {
     this.setState({ lastName: event.target.value });
+  }
+
+  handleDateOfBirthChange(event) {
+    this.setState({ dateOfBirth: event.target.value });
   }
 
   render() {
@@ -66,6 +88,11 @@ class NumerologyPage extends Component {
                 <input type="text" className="form-control" id="last-name" placeholder="last name given during birth"
                   value={this.state.lastName} onChange={this.handleLastNameChange} />
               </div>
+              <div className="input-group col-lg-8">
+                <label htmlFor="date-of-birth">Date of Birth</label>
+                <input type="text" className="form-control" id="date-of-name" placeholder="mm-dd-yyyy"
+                  value={this.state.dateOfBirth} onChange={this.handleDateOfBirthChange} />
+              </div>
               <div className="btn-group">
                 <button type="submit" className="btn btn-default">
                   calculate
@@ -75,7 +102,11 @@ class NumerologyPage extends Component {
           </div>
         </div>
 
-        <CalculationsPage isVisible={this.getIsVisible()} name={this.getName()} destinyNumber={this.getDestinyNumber()} />
+        <CalculationsPage isVisible={this.getIsVisible()} name={this.getName()} 
+          destinyNumber={this.getDestinyNumber()}
+          birthForceNumber={this.getBirthForceNumber()} 
+          heartsDesireNumber={this.getHeartsDesireNumber()}
+          personalityNumber={this.getPersonalityNumber()} />
       </div>
     );
   }

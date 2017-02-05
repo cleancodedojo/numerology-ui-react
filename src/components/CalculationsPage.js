@@ -22,6 +22,18 @@ class CalculationsPage extends Component {
                 <span className="badge">{this.props.destinyNumber}</span>
                 Destiny Number
               </li>
+              <li className="list-group-item">
+                <span className="badge">{this.props.birthForceNumber}</span>
+                Birth Force Number
+              </li>
+              <li className="list-group-item">
+                <span className="badge">{this.props.heartsDesireNumber}</span>
+                Heart's Desire Number
+              </li>
+              <li className="list-group-item">
+                <span className="badge">{this.props.personalityNumber}</span>
+                Personality Number
+              </li>
             </ul>
           </div>
         </div>
@@ -35,7 +47,10 @@ class CalculationsPage extends Component {
 CalculationsPage.propTypes = {
   isVisible: React.PropTypes.bool,
   name: React.PropTypes.string,
-  destinyNumber: React.PropTypes.number
+  destinyNumber: React.PropTypes.number,
+  birthForceNumber: React.PropTypes.number,
+  heartsDesireNumber: React.PropTypes.number,
+  personalityNumber: React.PropTypes.number
 };
 
 export default CalculationsPage;

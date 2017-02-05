@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "3.3.7",
-    "numerology-core": "1.0.1",
+    "numerology-core": "1.1.0",
     "object-assign": "4.1.0",
     "react": "15.4.1",
     "react-dom": "15.4.1",
