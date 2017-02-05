@@ -48,6 +48,14 @@ class NumerologyPage extends Component {
     return this.numerology.getBirthForceNumber(this.getDateOfBirth());
   }
 
+  getHeartsDesireNumber() {
+    return this.numerology.getHeartsDesireNumber(this.getName());
+  }
+
+  getPersonalityNumber() {
+    return this.numerology.getPersonalityNumber(this.getName());
+  }
+
   handleFirstNameChange(event) {
     this.setState({ firstName: event.target.value });
   }
@@ -96,7 +104,9 @@ class NumerologyPage extends Component {
 
         <CalculationsPage isVisible={this.getIsVisible()} name={this.getName()} 
           destinyNumber={this.getDestinyNumber()}
-          birthForceNumber={this.getBirthForceNumber()} />
+          birthForceNumber={this.getBirthForceNumber()} 
+          heartsDesireNumber={this.getHeartsDesireNumber()}
+          personalityNumber={this.getPersonalityNumber()} />
       </div>
     );
   }
