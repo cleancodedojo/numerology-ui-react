@@ -9,6 +9,10 @@ import configureStore from './store/configureStore';
 import './styles/styles.scss'; // Yep, that's right. You can import SASS/CSS files too! Webpack will run the associated loader and plug this into the page.
 import { syncHistoryWithStore } from 'react-router-redux';
 
+browserHistory.listen( location =>  {
+  window.ga('send', 'pageview', location.pathname);
+});
+
 const store = configureStore();
 
 // Create an enhanced history that syncs navigation events with the store
